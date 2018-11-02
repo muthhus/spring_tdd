@@ -1,5 +1,6 @@
 package com.poc.tdd.spring.practise.rest;
 
+import com.poc.tdd.spring.practise.service.BookService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +25,7 @@ public class BookShopControllerTest {
     private MockMvc mockMvc;
 
     @MockBean
-    private BookShopServive bookShopServive;
+    private BookService bookShopServive;
 
     @Test
     public void welcomeMessageTest() throws Exception{
@@ -37,5 +38,5 @@ public class BookShopControllerTest {
                             .andExpect(content().string("Hello, Welcome to world BookShop!"))
                             .andReturn();
     }
-    
+
 }
