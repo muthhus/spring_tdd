@@ -8,11 +8,7 @@ import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
 import org.springframework.data.elasticsearch.annotations.FieldType;
 
-import java.util.Date;
-
-import static org.springframework.data.elasticsearch.annotations.FieldType.Date;
-
-@Document(indexName = "bookShop_author", type = "author")
+@Document(indexName = "bookshop_author", type = "author")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

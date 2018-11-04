@@ -8,5 +8,5 @@ import java.util.Optional;
 public interface BookService {
     Optional<Book> getBookDetailsByTitle(String title);
 
-    public String save(BookRequest book) throws Exception;
+    Book save(BookRequest request) throws Exception;
 }

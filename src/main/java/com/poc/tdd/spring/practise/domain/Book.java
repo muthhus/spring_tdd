@@ -10,7 +10,7 @@ import org.springframework.data.elasticsearch.annotations.FieldType;
 import java.math.BigDecimal;
 import java.util.Date;
 
-@Document(indexName = "bookShop_book", type = "book")
+@Document(indexName = "bookshop_book", type = "book")
 @Data
 public class Book {
 
@@ -22,6 +22,9 @@ public class Book {
 
     private BigDecimal price;
     private String isbn;
+
+    @Field(type = FieldType.Nested)
+    private BookGenre genre;
 
     @Field(type = FieldType.Nested)
     private Author writer;

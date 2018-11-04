@@ -1,20 +1,18 @@
 package com.poc.tdd.spring.practise.request;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-import java.math.BigDecimal;
+import lombok.ToString;
 
 @NoArgsConstructor
-@AllArgsConstructor
 @Getter
 @Setter
+@ToString
 public class BookRequest {
     private String title;
     private String subTitle;
-    private BigDecimal price;
+    private String price;
     private String author;
     private String publication;
     private String isbn;
