@@ -12,6 +12,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -55,6 +56,11 @@ public class BookShopController {
         request.setFirstRelease(bookRequest.getFirstRelease());
         LOG.info("Request", request.toString());
         return bookService.save(request);
+    }
+
+    @GetMapping("/all")
+    public List<Book> getAllBookDetails() throws Exception{
+        return bookService.getAllBooks();
     }
 
 }

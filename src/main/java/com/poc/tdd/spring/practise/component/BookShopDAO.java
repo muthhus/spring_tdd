@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -47,6 +48,11 @@ public class BookShopDAO implements BookService {
 
         return bookRepository.save(book);
 
+    }
+
+    @Override
+    public List<Book> getAllBooks() throws Exception {
+        return bookRepository.findAll();
     }
 
     private Author setAuthor(String author){
